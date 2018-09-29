@@ -33,7 +33,7 @@ const imgApi = axios.create({
 const weatherKey = 'c71f73f66f69011b48df6b46800d4e79'
 
 const weatherApi = axios.create({
-  baseURL: 'http://api.openweathermap.org/data/2.5/',
+  baseURL: '//api.openweathermap.org/data/2.5/',
   timeout: 3000
 })
 
