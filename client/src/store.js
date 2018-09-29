@@ -4,7 +4,7 @@ import axios from 'axios'
 import router from './router'
 
 var production = !window.location.host.includes('localhost');
-var baseUrl = production ? '//kanban.herokuapp.com/' : '//localhost:3000/';
+var baseUrl = production ? '//cmcinspire.herokuapp.com/' : '//localhost:3000/';
 
 let auth = axios.create({
   baseURL: baseUrl + 'auth',
