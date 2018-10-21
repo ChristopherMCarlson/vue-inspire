@@ -18,6 +18,7 @@
           <v-btn type="submit" class="blue-grey lighten-2">
             submit
           </v-btn>
+          <v-btn @click="newUserForm = !newUserForm" class="blue-grey lighten-2">New user?</v-btn>
         </v-form>
 
       </v-layout>
