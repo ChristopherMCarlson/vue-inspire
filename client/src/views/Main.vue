@@ -27,6 +27,7 @@
           <v-layout row wrap justify-center>
             Photo supplied by Pixabay
           </v-layout>
+          <v-button @click="Logout">Logout</v-button>
         </v-list>
       </v-dialog>
       <v-flex xs6 class="fade-up">
@@ -151,6 +152,9 @@
         }
         this.$store.dispatch('changeCity', userData)
         this.newCity = ''
+      },
+      Logout() {
+        this.$store.dispatch('logout')
       }
     },
     data() {
