@@ -2,7 +2,7 @@
   <v-container fluid fill-height>
     <v-slide-y-transition mode="out-in">
       <v-layout column justify-center align-center>
-        <v-form v-if="newUserForm" ref="form" class="elevation-2 pa-5" @submit.prevent="register">
+        <v-form v-if="newUserForm" ref="form" class="elevation-2 pa-5 login-form" @submit.prevent="register">
           <v-text-field v-model="newUser.name" type="text" label="First Name" required></v-text-field>
           <v-text-field v-model="newUser.email" type="text" label="E-mail" required></v-text-field>
           <v-text-field v-model="newUser.city" type="text" label="City (Optional)"></v-text-field>
@@ -12,7 +12,7 @@
           </v-btn>
           <v-btn @click="newUserForm = !newUserForm" class="blue-grey lighten-2">Returning user?</v-btn>
         </v-form>
-        <v-form v-else ref="form" class="elevation-2 pa-5" @submit.prevent="loginUser">
+        <v-form v-else ref="form" class="elevation-2 pa-5 login-form" @submit.prevent="loginUser">
           <v-text-field v-model="creds.email" type="text" label="E-mail" required></v-text-field>
           <v-text-field v-model="creds.password" type="password" label="Password" required></v-text-field>
           <v-btn type="submit" class="blue-grey lighten-2">
@@ -74,5 +74,9 @@
 
   a {
     color: #42b983;
+  }
+
+  .login-form {
+    background-color: #fafafa;
   }
 </style>

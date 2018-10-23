@@ -5,7 +5,6 @@
         <v-btn slot="activator" color="blue-grey lighten-2" dark>
           Options
         </v-btn>
-
         <v-list>
           <v-slider v-model="opacity" :max="9" label="Brightness" class="py-1 px-3"></v-slider>
           <v-layout row wrap>
@@ -27,7 +26,9 @@
           <v-layout row wrap justify-center>
             Photo supplied by Pixabay
           </v-layout>
-          <v-button @click="Logout">Logout</v-button>
+          <v-layout row wrap justify-center>
+              <v-btn @click="Logout" class="blue-grey lighten-2">Logout</v-btn>
+          </v-layout>
         </v-list>
       </v-dialog>
       <v-flex xs6 class="fade-up">
@@ -154,6 +155,7 @@
         this.newCity = ''
       },
       Logout() {
+        this.dialog = false
         this.$store.dispatch('logout')
       }
     },
